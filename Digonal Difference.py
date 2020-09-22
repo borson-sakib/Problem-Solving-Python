@@ -14,6 +14,14 @@ import sys
 #
 
 def diagonalDifference(arr):
+    sum1=0
+    sum2=0
+    for x in range(len(arr)):
+        y=len(arr)
+        sum1+=arr[x][x]
+        sum2+=arr[x][(y-1)-x]
+    return abs(sum1-sum2)
+
     # Write your code here
 
 if __name__ == '__main__':
@@ -31,3 +39,4 @@ if __name__ == '__main__':
     fptr.write(str(result) + '\n')
 
     fptr.close()
+
